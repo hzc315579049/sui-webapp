@@ -1,0 +1,28 @@
+----*本文件夹为开发文件夹*----
+---*开发框架使用了淘宝的MSUI，并在此基础上改动部分内容，前端自动化套件亦沿袭其风格*---
+--*文件夹功能说明*--
+---src（生产目录）
+---dev（开发目录）
+	--node_modules => node模块包，免除npm安装的烦恼;
+	--js => 普通js存放目录，业务等js也可放置于src/js目录下;
+	--less => 普通less存放目录，页面、global等css文件也可放置于src/css目录下;
+	--sm-js => 框架js，非必要情况请勿改动;
+	--sm-less => 框架less，非必要情况请勿改动;
+	--Gruntfile.js => 自动化工具grunt的运行文件-使用方法见下方自动化工具grunt使用说明;
+	--package.json => npm包配置文件,管理node模块等信息，类似于java的maven;
+	
+	
+1、css样式文件在less文件夹下编写，后缀请命名为.less，若不想使用less编译，可在src目录下的css目录中添加独立css文件，格式建议为layout-xx.css;
+
+2、js文件既可在dev目录下也可在src目录下，但模块性js必须放置在dev目录下;
+
+3、html、fonts、images资源请放在src下进行;
+
+4、npm使用说明：
+请在电脑上自行安装node.js和npm(通常两者是捆绑的，下载node会带上npm)，npm基础用法不详述;
+如果遇到的dev文件夹下没有node_modules目录或目录中模块不全，请在dev目录下执行命令行'npm install',安装模块;
+
+5、grunt使用说明：
+在命令行中cd到dev文件夹下，执行'grunt server',开启node服务器，所有在dev文件夹下的资源变更，都会被实时同步到生产目录src下，所以你要做的，只有cmd + 'grunt server'!!!!然后放手开发吧！
+
+6、详细使用请自行学习相关知识;
